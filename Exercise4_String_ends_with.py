@@ -9,7 +9,7 @@ solution('abc', 'd') // returns false
 """
 
 def string_end(str,ending):
-  return str.endswith(ending)
+  return str[-len(ending):] == ending
 
 if __name__ == '__main__':
   print(string_end('abc', 'bc'))

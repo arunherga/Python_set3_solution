@@ -11,8 +11,9 @@ Do not modify the input list.
 def longest_word(str):
   long = 0
   for i in str:
-    long = max(long,len(i))
+    if len(i) > long:
+      long = len(i)
   return long
 
 if __name__ == '__main__':
-  print(longest_word(['simple', 'is', 'better', 'than', 'complex']))
+  print(longest_word(['simple', 'is', 'better', 'than', 'complexity']))
