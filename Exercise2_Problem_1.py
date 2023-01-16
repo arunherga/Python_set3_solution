@@ -10,11 +10,12 @@
 
 def number_reverse_list(number):
     reverse_list = []
-    
-    for i,j in enumerate(str(number)):
-        reverse_list.append(int(j))
+    while number > 0:
+        n = number % 10
+        reverse_list.append(n)
+        number = int(number/10)
+    return reverse_list
 
-    return reverse_list[::-1]
 
 
 if __name__ == '__main__':
